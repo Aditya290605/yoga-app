@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "id": "asana_cat_cow_v1",
+    "title": "Cat-Cow Flow",
+    "category": "spinal_mobility",
+    "defaultLoopCount": 4,
+    "tempo": "slow"
+  },
+  "assets": {
+    "images": {
+      "base": "Base.png",
+      "cat": "Cat.png",
+      "cow": "Cow.png"
+    },
+    "audio": {
+      "intro": "cat_cow_intro.mp3",
+      "loop": "cat_cow_loop.mp3",
+      "outro": "cat_cow_outro.mp3"
+    }
+  },
+  "sequence": [
+    {
+      "type": "segment",
+      "name": "intro",
+      "audioRef": "intro",
+      "durationSec": 23,
+      "script": [
+        {
+          "text": "Come to all fours. Hands below shoulders, knees under hips. Feel the earth beneath you — steady, quiet, alive.",
+          "startSec": 0,
+          "endSec": 7,
+          "imageRef": "base"
+        },
+        {
+          "text": "Inhale… arch your spine, lift your heart. Let your chest open like sunlight breaking through leaves.",
+          "startSec": 7,
+          "endSec": 14,
+          "imageRef": "cat"
+        },
+        {
+          "text": "Exhale… round your back, tuck your chin. Feel the breath soften you like morning mist.",
+          "startSec": 14,
+          "endSec": 23,
+          "imageRef": "cow"
+        }
+      ]
+    },
+    {
+      "type": "loop",
+      "name": "breath_cycle",
+      "audioRef": "loop",
+      "durationSec": 20,
+      "iterations": "{{loopCount}}",
+      "loopable": true,
+      "script": [
+        {
+          "text": "Inhale… open, expand, shine.",
+          "startSec": 0,
+          "endSec": 8,
+          "imageRef": "cat"
+        },
+        {
+          "text": "Exhale… release, soften, ground.",
+          "startSec": 8,
+          "endSec": 16,
+          "imageRef": "cow"
+        },
+        {
+          "text": "Feel your spine flowing like a wave through the trees.",
+          "startSec": 16,
+          "endSec": 20,
+          "imageRef": "base"
+        }
+      ]
+    },
+    {
+      "type": "segment",
+      "name": "outro",
+      "audioRef": "outro",
+      "durationSec": 18,
+      "script": [
+        {
+          "text": "Finish your final round…",
+          "startSec": 0,
+          "endSec": 4,
+          "imageRef": "cat"
+        },
+        {
+          "text": "and return to a neutral spine.",
+          "startSec": 4,
+          "endSec": 7,
+          "imageRef": "cow"
+        },
+        {
+          "text": "Notice the warmth in your back, the ease in your breath. You are supported — rooted, yet free.",
+          "startSec": 7,
+          "endSec": 18,
+          "imageRef": "base"
+        }
+      ]
+    }
+  ]
+}
